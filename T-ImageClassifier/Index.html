@@ -34,13 +34,13 @@
                 <div class="w3-col l4">
                     <!-- About Card -->
                     <div class="w3-card w3-margin w3-margin-top">
-                        <video autoplay playsinline muted id="webcam" style="width:100%"></video>
+                        <video autoplay playsinline muted id="webcam" width="315" height="315"></video>
                         <hr>
                         <br>
                         <button class="w3-button w3-black w3-padding-large w3-margin-bottom" id="class-a">A</button>
                         <button class="w3-button w3-black w3-padding-large w3-margin-bottom" id="class-b">B</button>
                         <button class="w3-button w3-black w3-padding-large w3-margin-bottom" id="class-c">C</button>
-                        <button class="w3-button w3-black w3-padding-large w3-margin-bottom"> << Predict >> </button>
+                        <button class="w3-button w3-black w3-padding-large w3-margin-bottom" id="predictor" onclick="predict()"> << Predict >> </button>
                     </div><hr>
                     <!-- Posts -->
                     <!-- Labels / tags -->
@@ -49,19 +49,30 @@
                 <div class="w3-col l4">
                     <div class="w3-card w3-margin">
                         <div class="w3-container w3-padding">
-                            <h4>Results</h4>
+                            <h4>Training</h4>
                         </div>
                         <ul class="w3-ul w3-hoverable w3-white">
                             <li class="w3-padding-16">
-                                <!--<img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">-->
-                                <span class="w3-large">Lorem</span><br>
-                                <span id="console"></span>
+                                <span id="training-console"></span>
                             </li>
 
                         </ul>
                     </div>
                 </div>
 
+                <div class="w3-col l4">
+                    <div class="w3-card w3-margin">
+                        <div class="w3-container w3-padding">
+                            <h4>Prediction Result</h4>
+                        </div>
+                        <ul class="w3-ul w3-hoverable w3-white">
+                            <li class="w3-padding-16">
+                                <span id="prediction-result"></span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
           
                 <!-- END GRID -->

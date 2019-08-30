@@ -55,7 +55,7 @@ async function app() {
             const result = await classifier.predictClass(activation);
 
             const classes = ['A', 'B', 'C'];
-            document.getElementById('console').innerText = `
+            document.getElementById('training-console').innerText = `
         prediction: ${classes[result.classIndex]}\n
         probability: ${result.confidences[result.classIndex]}
       `;
@@ -76,7 +76,7 @@ async function predict() {
    // while (true) {
         const result = await net.classify(webcamElement);
 
-        document.getElementById('console-predictor').innerText = `
+        document.getElementById('prediction-result').innerText = `
       prediction: ${result[0].className}\n
       probability: ${result[0].probability}
     `;
